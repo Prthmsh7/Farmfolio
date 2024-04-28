@@ -1,0 +1,669 @@
+{
+  "version": "1.10",
+  "settings": {
+    "defaultLanguage": "en",
+    "languages": [
+      "en"
+    ],
+    "description": "",
+    "id": "7501f014-3bc2-4c0a-a922-53f76da643db",
+    "inactivityTimeout": 30,
+    "botVariables": [],
+    "userVariables": [],
+    "nodeRepetitionLimit": 3
+  },
+  "flows": [
+    {
+      "id": "wf-error",
+      "name": "Error",
+      "startNode": "nd-98dc0bcc87",
+      "variables": [],
+      "links": [
+        {
+          "id": "edg-1cb5862648",
+          "source": "nd-98dc0bcc87",
+          "sourcePort": "trs-02c7129430",
+          "target": "nd-58fca56e01"
+        },
+        {
+          "id": "edg-1c28c96d6a",
+          "source": "nd-58fca56e01",
+          "sourcePort": "nd-58fca56e01",
+          "target": "nd-e05f59dd66"
+        }
+      ],
+      "nodes": [
+        {
+          "comment": "<p><strong><span style=\"font-size: 18px\">⛔️ When something goes wrong</span></strong></p><p><br>This workflow is executed when there's an <strong>unexpected error</strong> in one of the other workflows.</p><p></p><p>You can use this to inform the user of the situation before ending the conversation.</p>",
+          "type": "comment",
+          "id": "nd-8ff3d7d295",
+          "name": "Comment1",
+          "deletable": true,
+          "instructions": [],
+          "height": 148,
+          "width": 401,
+          "x": 90,
+          "y": -45
+        },
+        {
+          "instructions": [
+            {
+              "id": "ins-2762f70004",
+              "type": "content",
+              "content": {
+                "type": "text",
+                "text": {
+                  "staticValue": "Sorry, an error occurred. Please try again later",
+                  "dynamicValue": "",
+                  "valueType": "static"
+                },
+                "typing": {
+                  "valueType": "static",
+                  "staticValue": true
+                }
+              },
+              "nodeId": "nd-58fca56e01"
+            }
+          ],
+          "defaultTransition": {
+            "targetNodeId": "nd-e05f59dd66"
+          },
+          "type": "standard",
+          "id": "nd-58fca56e01",
+          "name": "Handler",
+          "deletable": true,
+          "x": 450,
+          "y": 120
+        },
+        {
+          "id": "nd-98dc0bcc87",
+          "name": "On_Error",
+          "type": "entry",
+          "deletable": false,
+          "variables": [],
+          "instructions": [
+            {
+              "id": "trs-02c7129430",
+              "type": "transition",
+              "condition": {
+                "type": "expression",
+                "payload": "true"
+              },
+              "destination": {
+                "node": "nd-58fca56e01"
+              }
+            }
+          ],
+          "x": 90,
+          "y": 120
+        },
+        {
+          "id": "nd-e05f59dd66",
+          "name": "End",
+          "type": "end",
+          "variables": [],
+          "deletable": false,
+          "instructions": [
+            {
+              "id": "trs-945140a646",
+              "type": "transition",
+              "condition": {
+                "type": "expression",
+                "payload": "true"
+              },
+              "destination": {
+                "node": "END"
+              }
+            }
+          ],
+          "x": 810,
+          "y": 120
+        }
+      ]
+    },
+    {
+      "id": "wf-timeout",
+      "name": "Timeout",
+      "startNode": "nd-9f7f3268ac",
+      "variables": [],
+      "links": [
+        {
+          "id": "edg-b0d2adcd13",
+          "source": "nd-e6c012a652",
+          "sourcePort": "nd-e6c012a652",
+          "target": "nd-199fdcf439"
+        },
+        {
+          "id": "edg-6d17a0591b",
+          "source": "nd-9f7f3268ac",
+          "sourcePort": "trs-0c7a9a0003",
+          "target": "nd-e6c012a652"
+        }
+      ],
+      "nodes": [
+        {
+          "instructions": [],
+          "defaultTransition": {
+            "targetNodeId": "nd-199fdcf439"
+          },
+          "type": "standard",
+          "id": "nd-e6c012a652",
+          "name": "Handler",
+          "deletable": true,
+          "x": 435,
+          "y": 105
+        },
+        {
+          "comment": "<p><strong><span style=\"font-size: 18px\">⌛️ When conversation times out</span></strong></p><p><br>This workflow is executed when the conversation <strong>times out</strong> before it had time to flow to an <strong>End Node</strong>.</p><p></p><p>The <strong>Timeout Delay</strong> is configurable in the <strong>Chatbot Settings.</strong></p><p></p><p>You can use this to inform the user of the situation before ending the conversation.</p>",
+          "type": "comment",
+          "id": "nd-441efa6c42",
+          "name": "Comment1",
+          "deletable": true,
+          "instructions": [],
+          "height": 173,
+          "width": 401,
+          "x": 105,
+          "y": -90
+        },
+        {
+          "id": "nd-9f7f3268ac",
+          "name": "On_Timeout",
+          "type": "entry",
+          "deletable": false,
+          "variables": [],
+          "instructions": [
+            {
+              "id": "trs-0c7a9a0003",
+              "type": "transition",
+              "condition": {
+                "type": "expression",
+                "payload": "true"
+              },
+              "destination": {
+                "node": "nd-e6c012a652"
+              }
+            }
+          ],
+          "x": 100,
+          "y": 100
+        },
+        {
+          "id": "nd-199fdcf439",
+          "name": "End",
+          "type": "end",
+          "variables": [],
+          "deletable": false,
+          "instructions": [
+            {
+              "id": "trs-bf76943d55",
+              "type": "transition",
+              "condition": {
+                "type": "expression",
+                "payload": "true"
+              },
+              "destination": {
+                "node": "END"
+              }
+            }
+          ],
+          "x": 795,
+          "y": 105
+        }
+      ]
+    },
+    {
+      "id": "wf-conversation-end",
+      "name": "Conversation End",
+      "startNode": "nd-c0d3bd2c92",
+      "variables": [],
+      "links": [
+        {
+          "id": "edg-3cb8028ff6",
+          "source": "nd-c0d3bd2c92",
+          "sourcePort": "trs-92c6f93b0c",
+          "target": "nd-2db7499cc6"
+        },
+        {
+          "id": "edg-8a88f687a0",
+          "source": "nd-2db7499cc6",
+          "sourcePort": "nd-2db7499cc6",
+          "target": "nd-d0c2a6be81"
+        }
+      ],
+      "nodes": [
+        {
+          "instructions": [],
+          "defaultTransition": {
+            "targetNodeId": "nd-d0c2a6be81"
+          },
+          "type": "standard",
+          "id": "nd-2db7499cc6",
+          "name": "Handler",
+          "deletable": true,
+          "x": 420,
+          "y": 105
+        },
+        {
+          "comment": "<p><strong><span style=\"font-size: 18px\">👋 Before Conversation Ends</span></strong></p><p><br>This workflow is executed when right before the conversation <strong>Ends Explicitly.</strong></p><p></p><p>An <strong>Explicit Ending</strong> happens when a workflow transitions on an <strong>End Node</strong>.</p>",
+          "type": "comment",
+          "id": "nd-6d5d3f41dd",
+          "name": "Comment1",
+          "deletable": true,
+          "instructions": [],
+          "height": 148,
+          "width": 461,
+          "x": 105,
+          "y": -45
+        },
+        {
+          "id": "nd-c0d3bd2c92",
+          "name": "On_Explicit_Ending",
+          "type": "entry",
+          "deletable": false,
+          "variables": [],
+          "instructions": [
+            {
+              "id": "trs-92c6f93b0c",
+              "type": "transition",
+              "condition": {
+                "type": "expression",
+                "payload": "true"
+              },
+              "destination": {
+                "node": "nd-2db7499cc6"
+              }
+            }
+          ],
+          "x": 100,
+          "y": 100
+        },
+        {
+          "id": "nd-d0c2a6be81",
+          "name": "End",
+          "type": "end",
+          "variables": [],
+          "deletable": false,
+          "instructions": [
+            {
+              "id": "trs-7004dbb2b6",
+              "type": "transition",
+              "condition": {
+                "type": "expression",
+                "payload": "true"
+              },
+              "destination": {
+                "node": "END"
+              }
+            }
+          ],
+          "x": 780,
+          "y": 105
+        }
+      ]
+    },
+    {
+      "topicId": "tpc-global",
+      "id": "wf-main",
+      "name": "Main",
+      "startNode": "nd-2bb9db230d",
+      "variables": [],
+      "links": [
+        {
+          "id": "edg-37c6c6bdc4",
+          "source": "nd-3d225953fa",
+          "sourcePort": "nd-3d225953fa",
+          "target": "nd-80ac4ff158"
+        },
+        {
+          "id": "edg-e5134ed121",
+          "source": "nd-2bb9db230d",
+          "sourcePort": "trs-8b0779edc5",
+          "target": "nd-ebff7739fc"
+        },
+        {
+          "id": "edg-0c12d14e11",
+          "source": "nd-ebff7739fc",
+          "sourcePort": "nd-ebff7739fc",
+          "target": "nd-3d225953fa"
+        }
+      ],
+      "nodes": [
+        {
+          "instructions": [
+            {
+              "type": "ai-generate",
+              "id": "ins-946819d5e0",
+              "task": {
+                "model": "gpt-3.5-turbo-16k",
+                "temperature": 0.2,
+                "input": {
+                  "staticValue": null,
+                  "valueType": "dynamic",
+                  "dynamicValue": ""
+                },
+                "outputVariableId": "__none__",
+                "maxTokenLength": {
+                  "staticValue": 4000,
+                  "valueType": "static",
+                  "dynamicValue": ""
+                }
+              },
+              "nodeId": "nd-3d225953fa",
+              "prompt": {
+                "messages": [
+                  {
+                    "role": "system",
+                    "content": "Answer the following prompt in under {{GENERATION_LENGTH}} completion tokens.\nPrompt:{{GENERATION_INPUT}}"
+                  }
+                ],
+                "model": "gpt-3.5-turbo-16k",
+                "signatureVersion": "Jun-2023",
+                "temperature": 0.2,
+                "signature": "GUu+BoACchMaB4AhLklUS+yHqCVlSryiRj+h2sV3yUzokR/Tj/W42Sx2EsSL4/wl+BxD+VWlR2Vrydc1sWFbcHt17LCYYPSMKK72dD31YGAHlVS4MrLIGLiDxTXE6/9DFJwTJCwuucEErwBUEd75ggASVtUpd/xiUGlAs3ve6hRJflU2IG7oDg8lbb4fJ92C2LTFBBqonSQNGt/pAo9Mmzd/U6goS+jGZjcMLuZ8tXnvLXBkmorW3RD4LAyfIy6kpi+N3l+JeSSqaXOBUf7sXFbWTaPXcUF3VeIfoRsaQkuZaycjZRIPYZUEcYXrIug+V7SLUAvqcHe6N3arUcjyGw=="
+              }
+            }
+          ],
+          "defaultTransition": {
+            "targetNodeId": "nd-80ac4ff158"
+          },
+          "type": "standard",
+          "id": "nd-3d225953fa",
+          "name": "AI-Generated-text",
+          "deletable": true,
+          "x": 60,
+          "y": 60
+        },
+        {
+          "instructions": [
+            {
+              "id": "ins-8b3a0e1437",
+              "type": "capture",
+              "entityId": "prompts://RawInput/v1",
+              "entityName": "Raw Input",
+              "kbPriority": {
+                "enabled": true,
+                "searchScope": "specific",
+                "kbs": [
+                  "kb-cc22594611"
+                ]
+              },
+              "nodeId": "nd-ebff7739fc",
+              "question": {
+                "staticValue": "",
+                "dynamicValue": "How may I help you?",
+                "valueType": "dynamic"
+              },
+              "validation": {
+                "validators": []
+              },
+              "choice": {
+                "options": {
+                  "staticValue": [],
+                  "dynamicValue": "",
+                  "valueType": "static"
+                }
+              },
+              "retry": {
+                "maxRetries": 2,
+                "retryMessage": {
+                  "staticValue": "",
+                  "dynamicValue": "",
+                  "valueType": "dynamic"
+                }
+              },
+              "cancellation": {
+                "cancellable": true,
+                "confirmCancel": true,
+                "confirmCancelMessage": {
+                  "staticValue": "",
+                  "dynamicValue": "",
+                  "valueType": "static"
+                }
+              },
+              "handleFailure": false,
+              "historyLookback": 0,
+              "skipIfAlreadyFilled": false,
+              "transitions": [],
+              "prompt": {
+                "messages": [
+                  {
+                    "role": "system",
+                    "content": "You are ExtractGPT and your only goal is to generate useful content in JSON format for developers to parse and use. You don't know any other language than JSON."
+                  },
+                  {
+                    "role": "user",
+                    "content": "```typescript\n/** The user answer to the question \"undefined\" */\ninterface Output = { value: any }\n```\n\nHere is a conversation between me and a user. Transcript:\n\"\"\"\n(...)\nagent: undefined\nuser: undefined\n\"\"\""
+                  },
+                  {
+                    "role": "assistant",
+                    "content": "{}"
+                  },
+                  {
+                    "role": "user",
+                    "content": "\nNow, forget about the previous transcripts. These were just examples, don't consider those as valid transcripts for this new task.\n\n###\n\nThe current Date is {{CURRENT_DATE_TIME}}.\n\nAt this point of the conversation, I need require the user to fill the output in following JSON output to complete the task.\nIf more than one property, try to extract each of them the best you can.\n\n```typescript\n/** The user answer to the question \"{{QUESTION}}\" */\ninterface Output = { value: any }\n```\n\nHere is a conversation between me and a user. Transcript:\n\"\"\"\n(...)\n{{TRANSCRIPT}}\n\"\"\"\n\nIn the last user message, here are the entities found:\n\"\"\"\nENTITIES_IDENTIFIED\n\"\"\"\n\nI need you to extract from the conversation transcript above the values the user has provided.\nIf the user has not provided the information I need, I need you to set the value of the missing answer properties to null.\nHave some tolerance to typos and variations in how the user selects from the possible values.\n\n\n\nNow, please reply to me with the above JSON output and nothing but JSON.\nYou should not explain your answer and should not talk back to me. Just JSON."
+                  }
+                ],
+                "model": "gpt-3.5-turbo",
+                "temperature": 0,
+                "signatureVersion": "Jun-2023",
+                "signature": "wsDIMaSsJ1YTaWLaNEaV5IgB+C2qyh801nUa4CdCsmubxvThog1rJ7tYXwHKDnA4cpOm6gnznXN6AdKJSoh/tbRxO1abxj04bRbCn9y7BZ8i3qZQl1Le5PIaAmfampxeHFl8IasZNZYi5uWVQnd1IPS3iFv6wYhBGa/EPlz+AagSKdqmn11u/DSAfrYixnA2rW+XEORrVeVMt1P8zFU7ssoTSSNt7LZh1xmH0amoWFad2vSDxu/2eU55NZSGFlB8a1soPEGYq83QN6mHXldjsO1mEV7cHWsSBZPTXG37GipXEbYKe/9sQNwg6mpBLIuvbliiJ9DvjkkSyXQVkVhTyg=="
+              }
+            }
+          ],
+          "defaultTransition": {
+            "targetNodeId": "nd-3d225953fa"
+          },
+          "type": "standard",
+          "id": "nd-ebff7739fc",
+          "name": "Standard1",
+          "deletable": true,
+          "x": 75,
+          "y": -165
+        },
+        {
+          "comment": "<p><strong><span style=\"font-size: 18px\">⛳️ Beginning of the Conversation</span></strong></p><p><br>This workflow is executed at the beginning of each conversation or when a conversation is not inside any workflow.</p><p></p><p>By default, this chatbot will answer user questions on the Start Node using the custom knowledge uploaded in the Knowledge Bases. <br></p><p>You can change this behavior in the <strong>Knowledge Agent</strong> settings.</p>",
+          "type": "comment",
+          "id": "nd-b16fb374f8",
+          "name": "Comment1",
+          "deletable": true,
+          "instructions": [],
+          "height": 163,
+          "width": 446,
+          "x": -105,
+          "y": -420
+        },
+        {
+          "id": "nd-2bb9db230d",
+          "name": "Start",
+          "type": "start",
+          "deletable": false,
+          "instructions": [
+            {
+              "id": "trs-8b0779edc5",
+              "type": "transition",
+              "condition": {
+                "type": "expression",
+                "payload": "true"
+              },
+              "destination": {
+                "node": "nd-ebff7739fc"
+              }
+            }
+          ],
+          "x": -105,
+          "y": -180,
+          "kbPriority": {
+            "enabled": true,
+            "searchScope": "specific",
+            "kbs": [
+              "kb-2f0a7ea639"
+            ]
+          }
+        },
+        {
+          "id": "nd-80ac4ff158",
+          "name": "End",
+          "type": "end",
+          "deletable": false,
+          "instructions": [
+            {
+              "id": "trs-0260f5e672",
+              "type": "transition",
+              "condition": {
+                "type": "expression",
+                "payload": "true"
+              },
+              "destination": {
+                "node": "END"
+              }
+            }
+          ],
+          "x": 480,
+          "y": -75
+        }
+      ],
+      "parentFolder": "root"
+    }
+  ],
+  "intents": [
+    {
+      "id": "int-cancel",
+      "name": "cancel",
+      "utterances_with_slots": [
+        "cancel",
+        "abort",
+        "abandon",
+        "i want to cancel",
+        "forget about this",
+        "leave",
+        "stop",
+        "quit",
+        "you know what, nevermind",
+        "forget it"
+      ]
+    },
+    {
+      "id": "int-no",
+      "name": "no",
+      "utterances_with_slots": [
+        "no",
+        "i don't want to",
+        "absolutely not",
+        "nah",
+        "nope",
+        "not really",
+        "not sure",
+        "no thanks"
+      ]
+    },
+    {
+      "id": "int-yes",
+      "name": "yes",
+      "utterances_with_slots": [
+        "yes",
+        "yeah",
+        "absolutely",
+        "i'd like to",
+        "sure ",
+        "hmm probably",
+        "yup",
+        "ok"
+      ]
+    }
+  ],
+  "list_entities": [],
+  "pattern_entities": [],
+  "actions": [],
+  "hooks": [],
+  "qnas": [],
+  "knowledge_base": [
+    {
+      "dataSources": [],
+      "description": "This is about New KB1",
+      "id": "kb-2f0a7ea639",
+      "name": "Default Knowledge Base",
+      "parentFolder": "root"
+    },
+    {
+      "dataSources": [
+        {
+          "created_on": 1714215563377,
+          "data": {
+            "indexingJobs": [
+              "7501f014-3bc2-4c0a-a922-53f76da643db-01HWFKBCAAGJ9E7DS16S94C60H"
+            ],
+            "pages": []
+          },
+          "disabled": false,
+          "id": "ds-99ab65fab8",
+          "title": "www.ndtv.com",
+          "type": "web-page"
+        },
+        {
+          "created_on": 1714244046510,
+          "data": {
+            "document": {
+              "chunks": 1,
+              "id": "84e075c5-1c73-456d-8559-da0a1702f191",
+              "type": "html",
+              "url": "https://s3.us-east-1.amazonaws.com/cloud-studio-botsbca2d619-1916w6llinepa/7501f014-3bc2-4c0a-a922-53f76da643db/document/7062862b-cbbe-4bb5-951c-e625638f4a06.html"
+            },
+            "html": "<p>John is a football player. John can play basket ball as well.</p><p></p>"
+          },
+          "disabled": false,
+          "id": "ds-c98444e578",
+          "type": "rich-text"
+        },
+        {
+          "created_on": 1714215333005,
+          "data": {
+            "freshness": "Any",
+            "websiteFilter": "include",
+            "websites": [
+              "https://oldschool.runescape.wiki/w/Farming_traininghttps://oldschool.runescape.wiki/w/Farming_training",
+              "https://economictimes.indiatimes.com/news/economy/agriculture?from=mdrhttps://economictimes.indiatimes.com/news/economy/agriculture?from=mdr",
+              "https://www.ndtv.com/https://www.ndtv.com/",
+              "https://agriwelfare.gov.in/en/Majorhttps://agriwelfare.gov.in/en/Major"
+            ]
+          },
+          "disabled": false,
+          "id": "ds-f614648144",
+          "type": "web-search"
+        }
+      ],
+      "description": "This is about New KB1",
+      "id": "kb-cc22594611",
+      "name": "Farmfolio Knowledge Base",
+      "parentFolder": "root"
+    }
+  ],
+  "folders": [],
+  "agents": {
+    "SummaryAgent": {
+      "enabled": true,
+      "config": {
+        "summaryMaxTokens": 100
+      }
+    },
+    "TranslatorAgent": {
+      "config": {
+        "detectLanguage": true
+      }
+    },
+    "KnowledgeAgent": {
+      "enabled": true,
+      "config": {
+        "answerManually": false,
+        "context": "Summary of the conversation:\n\"\"\"\n{{conversation.SummaryAgent.summary}}\n\"\"\"\n\nTranscript:\n\"\"\"\n{{conversation.SummaryAgent.transcript}}\n\"\"\""
+      }
+    },
+    "PersonalityAgent": {
+      "config": {
+        "personality": ""
+      }
+    }
+  },
+  "tables": {},
+  "schemas": [],
+  "versions": []
+}
