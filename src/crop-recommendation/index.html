@@ -48,8 +48,8 @@
     <div id="purple"></div>
     <div class="main">
       <div class="page1">
-        <h1>Crop Assistance</h1>
-        <h2>and Marketplace</h2>
+        <h1>Crop</h1>
+        <h2> Assistance</h2>
       </div>
       <div class="page2">
         <h1>We are Team Silicon,</h1>
@@ -105,24 +105,33 @@
         </div>
       </div>
       <div class="page5">
-        <h2>Tech Stack</h2>
-        <div class="box">
-          <h3>Javascript, React</h3>
-        </div>
-        <div class="box">
-          <h3>Python, Flask</h3>
-        </div>
-        <div class="box">
-          <h3>TensorFlow</h3>
-        </div>
-        <div class="box">
-          <h3>ML/DL</h3>
-        </div>
-        <div class="box">
-          <h3>Keras CNN, CNN</h3>
-        </div>
-      </div>
+        <form action="form" method="post">
+          <label for="Nitrogen">Nirogen:</label>
+          <input type="text" id="Nirogen" name="Nitrogen" min="0" max="100" placeholder="Nitrogen" required>
+        
+          <label for="Phosphorus">Phosphorus:</label>
+          <input type="text" id="Phosphorus" name="Phosphorus" min="0" max="100" placeholder="Phosphorus" required>
+        
+          <label for="Potassium">Potassium:</label>
+          <input type="text" id="Potassium" name="Potassium" min="0" max="100" placeholder="Potassium" required>
+        
+          <label for="Temperature">Temperature:</label>
+          <input type="text" id="Temperature" name="Temperature" min="0" max="100" placeholder="Temperature in Degree Celcius" required>
+        
+          <label for="Humidity">Humidity:</label>
+          <input type="text" id="Humidity" name="Humidity" min="0" max="100" placeholder="Relative Humidity in Percentage" required>
+        
+          <label for="ph">ph:</label>
+          <input type="text" id="ph" name="ph" min="0" max="14" placeholder="ph should be in between 0-14" required>
+        
+          <label for="Rainfall">Rainfall:</label>
+          <input type="text" id="Rainfall" name="Rainfall" placeholder="Rainfall in MM" required min="0" max="10000">
+        
+          <input type="submit" id="submit" name="submit" value="Predict Your Crop">
+        </form>
     </div>
+
+    
 
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
     <script
