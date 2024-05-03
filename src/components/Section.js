@@ -7,9 +7,7 @@ const Section = ({ title, items, togglePop }) => {
     return (
         <div className='cards__section'>
             <h3 id={title}>{title}</h3>
-
-            <hr />
-
+            <hr/>
             <div className='cards'>
                 {items.map((item, index) => (
                     <div className='card' key={index} onClick={() => togglePop(item)}>

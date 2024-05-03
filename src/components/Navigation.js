@@ -10,7 +10,7 @@ const Navigation = ({ account, setAccount }) => {
     return (
         <nav>
             <div className='nav__brand'>
-                <h1>Dappazon</h1>
+                <h1>Farmfolio</h1>
             </div>
 
             <input
@@ -36,9 +36,9 @@ const Navigation = ({ account, setAccount }) => {
             )}
 
             <ul className='nav__links'>
-                <li><a href="#Clothing & Jewelry">Clothing & Jewelry</a></li>
-                <li><a href="#Electronics & Gadgets">Electronics & Gadgets</a></li>
-                <li><a href="#Toys & Gaming">Toys & Gaming</a></li>
+                <li><a href="#Fertilizers">Fertilizers</a></li>
+                <li><a href="#Seeds">Seeds</a></li>
+                <li><a href="#Pesticides">Pesticides</a></li>
             </ul>
         </nav>
     );

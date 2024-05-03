@@ -9,9 +9,9 @@
 :root {
   --clr-white: #FFFFFF;
   --clr-black: #000000;
-  --clr-grey: #707070;
-  --clr-bunker: #131921;
-  --clr-ebony-clay: #232f3e;
+  --clr-grey: #93df22;
+  --clr-bunker: #0f6f09;
+  --clr-ebony-clay: #4ec22e;
   --clr-orange: #FF9900;
   --clr-orange-dark: #cc8111;
 }
@@ -81,7 +81,7 @@ nav {
 
 .nav__links li a {
   text-decoration: none;
-  color: var(--clr-white);
+  color: var(--clr-black);
 }
 
 .nav__links li a:hover {

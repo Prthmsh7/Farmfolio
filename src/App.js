@@ -12,15 +12,17 @@ import Dappazon from './abis/Dappazon.json'
 // Config
 import config from './config.json'
 
+
+
 function App() {
   const [provider, setProvider] = useState(null)
   const [dappazon, setDappazon] = useState(null)
 
   const [account, setAccount] = useState(null)
 
-  const [electronics, setElectronics] = useState(null)
-  const [clothing, setClothing] = useState(null)
-  const [toys, setToys] = useState(null)
+  const [fertilizers, setFertilizers] = useState(null)
+  const [seeds, setSeeds] = useState(null)
+  const [pesticides, setPesticides] = useState(null)
 
   const [item, setItem] = useState({})
   const [toggle, setToggle] = useState(false)
@@ -45,13 +47,13 @@ function App() {
       items.push(item)
     }
 
-    const electronics = items.filter((item) => item.category === 'electronics')
-    const clothing = items.filter((item) => item.category === 'clothing')
-    const toys = items.filter((item) => item.category === 'toys')
+    const fertilizers = items.filter((item) => item.category === 'fertilizers')
+    const seeds = items.filter((item) => item.category === 'seeds')
+    const pesticides = items.filter((item) => item.category === 'pesticides')
 
-    setElectronics(electronics)
-    setClothing(clothing)
-    setToys(toys)
+    setFertilizers(fertilizers)
+    setSeeds(seeds)
+    setPesticides(pesticides)
   }
 
   useEffect(() => {
@@ -62,14 +64,14 @@ function App() {
     <div>
       <Navigation account={account} setAccount={setAccount} />
 
-      <h2>Dappazon Best Sellers</h2>
+      <h2>Farmfolio Best Sellers</h2>
 
-      {electronics && clothing && toys && (
-        <>
-          <Section title={"Clothing & Jewelry"} items={clothing} togglePop={togglePop} />
-          <Section title={"Electronics & Gadgets"} items={electronics} togglePop={togglePop} />
-          <Section title={"Toys & Gaming"} items={toys} togglePop={togglePop} />
-        </>
+      {fertilizers && seeds && pesticides && (
+          <>
+             <Section title={"Fertilizers"} items={fertilizers} togglePop={togglePop} />
+             <Section title={"Seeds"} items={seeds} togglePop={togglePop} />
+             <Section title={"Pesticides"} items={pesticides} togglePop={togglePop} />
+          </>
       )}
 
       {toggle && (
