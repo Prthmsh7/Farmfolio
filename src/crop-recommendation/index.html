@@ -18,6 +18,24 @@
   </head>
 
   <body>
+    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+<script>
+    window.botpressWebChat.init({
+        "composerPlaceholder": "Chat with bot",
+        "botConversationDescription": "This chatbot was built surprisingly fast with Botpress",
+        "botId": "cc132b53-f84e-4175-8366-5b7a7b231b67",
+        "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+        "messagingUrl": "https://messaging.botpress.cloud",
+        "clientId": "cc132b53-f84e-4175-8366-5b7a7b231b67",
+        "webhookId": "f0f83ba3-0198-4b95-a929-11cc6ef0e9ff",
+        "lazySocket": true,
+        "themeName": "prism",
+        "frontendVersion": "v1",
+        "showPoweredBy": true,
+        "theme": "prism",
+        "themeColor": "#2563eb"
+    });
+</script>
     <div class="cursor"></div>
     <div id="nav">
       <h1>FARMFOLIO</h1>
@@ -70,7 +88,7 @@
         </div>
       </div>
       <div class="page3">
-        <h1>कृषि सारथी</h1>
+        <h1>An aid for farmers</h1>
         <div class="page3-part1">
           <img src="images\gyan-shahane-eSoyrx3YIwk-unsplash.jpg" alt="" />
           <img src="images\pexels-tomfisk-1595104.jpg" /><img />
@@ -103,30 +121,7 @@
         </div>
       </div>
       <div class="page5">
-        <form action="form" method="post">
-          <label for="Nitrogen">Nirogen:</label>
-          <input type="text" id="Nirogen" name="Nitrogen" min="0" max="100" placeholder="Nitrogen" required>
-        
-          <label for="Phosphorus">Phosphorus:</label>
-          <input type="text" id="Phosphorus" name="Phosphorus" min="0" max="100" placeholder="Phosphorus" required>
-        
-          <label for="Potassium">Potassium:</label>
-          <input type="text" id="Potassium" name="Potassium" min="0" max="100" placeholder="Potassium" required>
-        
-          <label for="Temperature">Temperature:</label>
-          <input type="text" id="Temperature" name="Temperature" min="0" max="100" placeholder="Temperature in Degree Celcius" required>
-        
-          <label for="Humidity">Humidity:</label>
-          <input type="text" id="Humidity" name="Humidity" min="0" max="100" placeholder="Relative Humidity in Percentage" required>
-        
-          <label for="ph">ph:</label>
-          <input type="text" id="ph" name="ph" min="0" max="14" placeholder="ph should be in between 0-14" required>
-        
-          <label for="Rainfall">Rainfall:</label>
-          <input type="text" id="Rainfall" name="Rainfall" placeholder="Rainfall in MM" required min="0" max="10000">
-        
-          <input type="submit" id="submit" name="submit" value="Predict Your Crop">
-        </form>
+      
     </div>
 
     
@@ -152,43 +147,3 @@
     <script src="script.js"></script>
   </body>
 </html>
-
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patil Agrotech</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <form action="form" method="post">
-  <label for="Nitrogen">Nirogen:</label>
-  <input type="text" id="Nirogen" name="Nitrogen" min="0" max="100" placeholder="Nitrogen" required>
-
-  <label for="Phosphorus">Phosphorus:</label>
-  <input type="text" id="Phosphorus" name="Phosphorus" min="0" max="100" placeholder="Phosphorus" required>
-
-  <label for="Potassium">Potassium:</label>
-  <input type="text" id="Potassium" name="Potassium" min="0" max="100" placeholder="Potassium" required>
-
-  <label for="Temperature">Temperature:</label>
-  <input type="text" id="Temperature" name="Temperature" min="0" max="100" placeholder="Temperature in Degree Celcius" required>
-
-  <label for="Humidity">Humidity:</label>
-  <input type="text" id="Humidity" name="Humidity" min="0" max="100" placeholder="Relative Humidity in Percentage" required>
-
-  <label for="ph">ph:</label>
-  <input type="text" id="ph" name="ph" min="0" max="14" placeholder="ph should be in between 0-14" required>
-
-  <label for="Rainfall">Rainfall:</label>
-  <input type="text" id="Rainfall" name="Rainfall" placeholder="Rainfall in MM" required min="0" max="10000">
-
-  <input type="submit" id="submit" name="submit" value="Predict Your Crop">
-</form>
-
-</body>
-</html>
- -->
