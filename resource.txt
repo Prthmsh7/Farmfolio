@@ -1,1 +1,50 @@
 //This file contains all the important resources that we'll use through out the project
+-----------------------------------------------
+customer support bot :
+
+<script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+<script>
+  window.botpressWebChat.init({
+      "composerPlaceholder": "Chat with bot",
+      "botConversationDescription": "This chatbot was built surprisingly fast with Botpress",
+      "botId": "cc132b53-f84e-4175-8366-5b7a7b231b67",
+      "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+      "messagingUrl": "https://messaging.botpress.cloud",
+      "clientId": "cc132b53-f84e-4175-8366-5b7a7b231b67",
+      "webhookId": "f0f83ba3-0198-4b95-a929-11cc6ef0e9ff",
+      "lazySocket": true,
+      "themeName": "prism",
+      "frontendVersion": "v1",
+      "showPoweredBy": true,
+      "theme": "prism",
+      "themeColor": "#2563eb"
+  });
+</script>
+
+----------------------------------------------------
+Curret Affairs bot :
+
+<script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+<script>
+  window.botpressWebChat.init({
+      "composerPlaceholder": "Chat with bot",
+      "botConversationDescription": "This chatbot was built surprisingly fast with Botpress",
+      "botId": "9720bd39-a230-4b83-a8af-085ac4997602",
+      "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+      "messagingUrl": "https://messaging.botpress.cloud",
+      "clientId": "9720bd39-a230-4b83-a8af-085ac4997602",
+      "webhookId": "e677b8f6-edb8-4326-9e34-39784de2a942",
+      "lazySocket": true,
+      "themeName": "prism",
+      "frontendVersion": "v1",
+      "showPoweredBy": true,
+      "theme": "prism",
+      "themeColor": "#2563eb"
+  });
+</script>
+
+---------------------------------------------------
+crop recommendation : 
+
+
+--------------------------------------------------
