@@ -1,0 +1,25 @@
+Page-1 : (In place of STUDY ) : FARMFOLIO
+-------------------------------------------------
+page-2 : Why did we create Farmfolio?
+        
+        It is not easy being a farmer . . .
+         (small text)---
+         Despite the critical role of agriculture in sustaining communities and economies,
+          farmers as well as domestic cultivators encounter significant hurdles. 
+          They face challenges in selecting the most suitable crops to grow, 
+          diagnosing issues with their crops, and accessing the necessary products 
+          for cultivation. Limited access to relevant information, personalized guidance, 
+          and a platform for purchasing farming-related products restricts farmers' 
+          ability to make informed decisions. This often leads to suboptimal crop choices 
+          and reduced yields.
+
+page-3 : Unlocking Farmfolio
+         get a walkthrough?
+
+page-4 : We are Team Silicon,
+We are a group of design - driven, goal-focused students,
+ coders and hackers who believe that the details make all the difference.
+ 
+ page-5 : crop recommendation
+          crop disease detection
+          Marketplace
