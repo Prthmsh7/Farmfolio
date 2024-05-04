@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -15,10 +15,38 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Customize chatbot container */
+      #bp-webchat-container {
+          border: 1px solid #ccc;
+          border-radius: 10px;
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+          overflow: hidden;
+      }
+
+      /* Customize chatbot header */
+      .bp-header {
+          background-color: #2563eb;
+          color: #fff;
+          padding: 10px;
+          text-align: center;
+      }
+
+      /* Customize chatbot composer */
+      .bp-composer {
+          background-color: #f5f5f5;
+          border: none;
+          border-top: 1px solid #ddd;
+          border-radius: 0;
+      }
+  </style>
   </head>
 
   <body>
-    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+    <div id="bp-webchat-container"></div>
+
+<!-- Load Botpress Webchat -->
+<script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
 <script>
     window.botpressWebChat.init({
         "composerPlaceholder": "Chat with bot",
@@ -53,7 +81,7 @@
           </a>
 
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Crop Recommendation</a></li>
+            <li><a class="dropdown-item" href="/Farmfolio/src/crop-recommendation/index.html">Crop Recommendation</a></li>
             <li><a class="dropdown-item" href="#">Personalized guidance</a></li>
             <li><a class="dropdown-item" href="#">E-Commerce</a></li>
           </ul>
@@ -66,29 +94,32 @@
     <div id="purple"></div>
     <div class="main">
       <div class="page1">
-        <h1>कृषि </h1>
-        <h2> विकास</h2>
+        <h3 id="main-text">FARMFOLIO</h3>
+        <h1>Crop Assistance</h1>
+        <h2>and Marketplace</h2>
       </div>
       <div class="page2">
-        <h1>कृषि Bot</h1>
+        <h1>We are Team Silicon,</h1>
         <div class="page2-container">
           <div class="page2-left">
             <h2>
-              This bot has been built to assist you in your cultivation process. 
+              We are a group of design - driven, goal-focused students, coders
+              and hackers who believe that the details make all the difference.
             </h2>
           </div>
           <div class="page2-right">
             <p>
-              We are here to assist you with the type of crops
-               that you might consider growing, taking into account the nutrient content of the soil, the environmental conditions, the moisture content 
-               of your soil to help you maximize your yields and skyrocket your profit.
+              We love to create, we love to solve, we love to collaborate, and
+              we love to turn amazing ideas into reality. We’re here to partner
+              with you through every step of the process and know that
+              relationships are the most important things we build.
             </p>
             <button>About us</button>
           </div>
         </div>
       </div>
       <div class="page3">
-        <h1>An aid for farmers</h1>
+        <h1>We aim to build</h1>
         <div class="page3-part1">
           <img src="images\gyan-shahane-eSoyrx3YIwk-unsplash.jpg" alt="" />
           <img src="images\pexels-tomfisk-1595104.jpg" /><img />
@@ -98,33 +129,35 @@
         <div class="elem">
           <img src="images\pexels-pixabay-235925.jpg" alt="" />
           <div class="text-div">
-            <h1>Crop Selection</h1>
-            <h1>Crop Selection</h1>
+            <h1>Disease Detection</h1>
+            <h1>Disease Detection</h1>
           </div>
           <img src="images\pexels-kovyrina-1600139.jpg" alt="" />
         </div>
         <div class="elem">
           <img src="images\pexels-pixabay-235925.jpg" alt="" />
           <div class="text-div">
-            <h1>Personalized Guidance</h1>
-            <h1>Personalized Guidance</h1>
+            <h1>Crop Recommendation</h1>
+            <h1>Crop Recommendation</h1>
           </div>
           <img src="images\pexels-kovyrina-1600139.jpg" alt="" />
         </div>
         <div class="elem">
           <img src="images\pexels-pixabay-235925.jpg" alt="" />
           <div class="text-div">
-            <h1>E-Commerce</h1>
-            <h1>E-Commerce</h1>
+            <h1>Marketplace</h1>
+            <h1>Marketplace</h1>
           </div>
           <img src="images\pexels-kovyrina-1600139.jpg" alt="" />
         </div>
       </div>
       <div class="page5">
-      
-    </div>
-
-    
+        <h1>We aim to build</h1>
+        <div class="page5-part1">
+          <img src="images\gyan-shahane-eSoyrx3YIwk-unsplash.jpg" alt="" />
+          <img src="images\pexels-tomfisk-1595104.jpg" /><img />
+        </div>
+      </div>
 
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
     <script

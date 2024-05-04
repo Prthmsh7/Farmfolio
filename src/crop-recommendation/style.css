@@ -1,13 +1,10 @@
-@font-face {
-  font-family: PP mori;
-  src: url(./ppmori.ttf);
-}
+@import url("https://fonts.googleapis.com/css2?family=Mate:ital@0;1&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: PP mori;
+  font-family: Raleway;
   color: #fff;
 }
 
@@ -51,31 +48,43 @@ body {
   position: relative;
   z-index: 9;
   padding-top: 12vw;
-  color: #111;
+  color: white;
+  font-family: Raleway;
+}
+
+.page1 h3 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  font-size: calc(8vw + 8rem);
+  font-weight: 800;
+  letter-spacing: -5px;
 }
 
 #nav {
   height: 55px;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 30px;
   position: fixed;
-  mix-blend-mode: difference;
+  /* mix-blend-mode: difference; */
   z-index: 102;
   cursor: none;
+  color: black;
 }
 
 #nav h1 {
   font-size: calc(0.8vw + 0.8rem);
   font-weight: 700;
+  font-family: Raleway;
+  color: black;
 }
 
-#nav img {
-  height: 27px;
-}
 #nav-part2 {
   display: flex;
   align-items: center;
@@ -87,16 +96,17 @@ body {
   height: 18px;
   width: 18px;
   border-radius: 50%;
-  background-color: #fff;
+  background-color: black;
 }
 #nav h4 {
   font-size: 16px;
   font-weight: 500;
   text-transform: uppercase;
   margin: 0;
+  color: black;
 }
 #nav h4:nth-child(1) {
-  border-bottom: 1.5px solid #fff;
+  border-bottom: 1.5px solid;
 }
 
 .dropdown-toggle {
@@ -104,21 +114,22 @@ body {
   text-transform: uppercase;
   border: none;
   padding: 0;
+  color: black;
 }
 
-.dropdown a::hover {
+/* .dropdown a::hover {
   background-color: #a2e0b0;
-}
+} */
 
 .dropdown-toggle:nth-child(1) {
-  border-bottom: 1.5px solid #fff;
+  border-bottom: 1.5px solid;
   border-radius: 0;
 }
 
 .page1 h1 {
   font-size: 8vw;
   font-weight: 500;
-  font-family: PP mori;
+  font-family: Raleway;
 
   margin-left: 6vw;
   transform-origin: left;
@@ -127,17 +138,18 @@ body {
   font-size: 8vw;
   font-weight: 500;
   transform-origin: left;
-
+  font-family: Raleway;
   margin-left: 26vw;
+  padding-top: 40px;
 }
 
-.page1 video {
+/* .page1 video {
   width: 60%;
   margin-top: 10vw;
   position: relative;
   left: 50%;
   transform: translate(-50%, 0);
-}
+} */
 
 .page2 {
   min-height: 80vh;
@@ -263,7 +275,7 @@ body {
 
 .elem:hover h1 {
   transform: translateY(-100%);
-  color: #edbfff;
+  color: whitesmoke;
 }
 .elem:hover img {
   opacity: 1;
@@ -273,68 +285,27 @@ body {
 .page5 {
   min-height: 100vh;
   width: 100%;
+  padding-top: 100px;
   position: relative;
   z-index: 9;
-  padding: 140px 100px;
 }
-.page5 h2 {
-  font-size: 4vw;
-  text-transform: uppercase;
-  font-weight: 400;
-  margin-bottom: 50px;
+
+.page5 h1 {
+  font-size: 6.8vw;
+  font-weight: 700;
+  color: #111;
+  margin-left: 100px;
 }
-.box {
-  /* background-color: red; */
+.page5-part1 {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
-  height: 100px;
-  padding: 0 20px;
-  border-top: 2px solid #dadada;
 }
-
-.box:nth-last-child(1) {
-  border-bottom: 2px solid #dadada;
+.page5-part1 img:nth-child(1) {
+  height: 400px;
+  margin-top: 160px;
 }
-
-
-/* body {
-    background-image: url(prediction_back.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  form {
-    width: 500px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 10px;
-  }
-
-  input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 5px;
-    border: none;
-  }
-
-  input[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 5px;
-    border: none;
-    background-color: #4CAF50;
-    color: white;
-    cursor: pointer;
-  }
-
-  label {
-    font-size: 16px;
-    margin-top: 20px;
-    display: block;
-  } */
+.page5-part1 img:nth-child(2) {
+  height: 400px;
+  margin-top: 40px;
+}
