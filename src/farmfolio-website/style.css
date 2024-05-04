@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Raleway";
+  font-family: Raleway;
   color: #fff;
 }
 
@@ -130,7 +130,7 @@ body {
   font-size: 8vw;
   font-weight: 500;
   font-family: Raleway;
-  padding-bottom: 30px;
+
   margin-left: 6vw;
   transform-origin: left;
 }
@@ -140,7 +140,7 @@ body {
   transform-origin: left;
   font-family: Raleway;
   margin-left: 26vw;
-  padding-top: 30px;
+  padding-top: 40px;
 }
 
 /* .page1 video {
@@ -285,26 +285,27 @@ body {
 .page5 {
   min-height: 100vh;
   width: 100%;
+  padding-top: 100px;
   position: relative;
   z-index: 9;
-  padding: 140px 100px;
-}
-.page5 h2 {
-  font-size: 4vw;
-  text-transform: uppercase;
-  font-weight: 400;
-  margin-bottom: 50px;
-}
-.box {
-  /* background-color: red; */
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 100px;
-  padding: 0 20px;
-  border-top: 2px solid #dadada;
 }
 
-.box:nth-last-child(1) {
-  border-bottom: 2px solid #dadada;
+.page5 h1 {
+  font-size: 6.8vw;
+  font-weight: 700;
+  color: #111;
+  margin-left: 100px;
+}
+.page5-part1 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.page5-part1 img:nth-child(1) {
+  height: 400px;
+  margin-top: 160px;
+}
+.page5-part1 img:nth-child(2) {
+  height: 400px;
+  margin-top: 40px;
 }
