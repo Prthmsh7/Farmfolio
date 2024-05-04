@@ -1,11 +1,11 @@
 //This file contains all the important resources that we'll use through out the project
------------------------------------------------
+--------------------------------------------------------------------------------------------------------------
 customer support bot :
 
 <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
 <script>
   window.botpressWebChat.init({
-      "composerPlaceholder": "Chat with bot",
+      "composerPlaceholder": "Ask from Krishi",
       "botConversationDescription": "This chatbot was built surprisingly fast with Botpress",
       "botId": "cc132b53-f84e-4175-8366-5b7a7b231b67",
       "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
@@ -14,6 +14,9 @@ customer support bot :
       "webhookId": "f0f83ba3-0198-4b95-a929-11cc6ef0e9ff",
       "lazySocket": true,
       "themeName": "prism",
+      "botName": "Customer Support",
+      "avatarUrl": "https://media.istockphoto.com/id/588973650/vector/farmer-man-vector-illustration.jpg?s=1024x1024&w=is&k=20&c=NKgNHqG3QwPIusyANVINitJjDUu3FU2WG6xQrkTQbGM=",
+      "stylesheet": "https://webchat-styler-css.botpress.app/prod/code/b6188943-18e5-4a51-b102-ab0c12405003/v71543/style.css",
       "frontendVersion": "v1",
       "showPoweredBy": true,
       "theme": "prism",
@@ -21,7 +24,7 @@ customer support bot :
   });
 </script>
 
-----------------------------------------------------
+-----------------------------------------------------------------------------------------------------------
 Curret Affairs bot :
 
 <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
@@ -43,8 +46,25 @@ Curret Affairs bot :
   });
 </script>
 
----------------------------------------------------
+-----------------------------------------------------------------------------------------------------------
 crop recommendation : 
 
-
---------------------------------------------------
+<script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+<script>
+  window.botpressWebChat.init({
+      "composerPlaceholder": "Chat with bot",
+      "botConversationDescription": "This chatbot was built surprisingly fast with Botpress",
+      "botId": "2bb8d889-be16-43a0-b5eb-6ec0f55a1183",
+      "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+      "messagingUrl": "https://messaging.botpress.cloud",
+      "clientId": "2bb8d889-be16-43a0-b5eb-6ec0f55a1183",
+      "webhookId": "fd51ee85-7dc9-4600-894d-951ea1b10256",
+      "lazySocket": true,
+      "themeName": "prism",
+      "frontendVersion": "v1",
+      "showPoweredBy": true,
+      "theme": "prism",
+      "themeColor": "#2563eb"
+  });
+</script>
+------------------------------------------------------------------------------------------------------
