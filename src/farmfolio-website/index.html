@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -18,28 +18,28 @@
     <style>
       /* Customize chatbot container */
       #bp-webchat-container {
-          border: 1px solid #ccc;
-          border-radius: 10px;
-          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-          overflow: hidden;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
       }
 
       /* Customize chatbot header */
       .bp-header {
-          background-color: #2563eb;
-          color: #fff;
-          padding: 10px;
-          text-align: center;
+        background-color: #2563eb;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
       }
 
       /* Customize chatbot composer */
       .bp-composer {
-          background-color: #f5f5f5;
-          border: none;
-          border-top: 1px solid #ddd;
-          border-radius: 0;
+        background-color: #f5f5f5;
+        border: none;
+        border-top: 1px solid #ddd;
+        border-radius: 0;
       }
-  </style>
+    </style>
   </head>
 
   <body>
@@ -61,7 +61,13 @@
           </a>
 
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="/Farmfolio/src/crop-recommendation/index.html">Crop Recommendation</a></li>
+            <li>
+              <a
+                class="dropdown-item"
+                href="/Farmfolio/src/crop-recommendation/index.html"
+                >Crop Recommendation</a
+              >
+            </li>
             <li><a class="dropdown-item" href="#">Personalized guidance</a></li>
             <li><a class="dropdown-item" href="#">E-Commerce</a></li>
           </ul>
@@ -73,46 +79,47 @@
     </div>
     <div id="purple"></div>
     <div class="main">
-      <script src="https://cdn.botpress.cloud/webchat/v0/inject.js"></script> 
-<script>
-    window.botpressWebChat.init({
-        // Replace <your-bot-id> and <your-client-id> with your actual bot and client IDs
-        "botId": "cc132b53-f84e-4175-8366-5b7a7b231b67",
-        "clientId": "cc132b53-f84e-4175-8366-5b7a7b231b67",
- 
-        // Set the URL for the Botpress WebChat JavaScript file and the messaging server
-        "hostUrl": "https://cdn.botpress.cloud/webchat/v0",
-        "messagingUrl": "https://messaging.botpress.cloud",
- 
-        // Set the name of the bot that will be displayed in the WebChat interface
-        "botName": "Krishi",
- 
-        // Set the width of the WebChat container and layout to 100% (Full Screen)
-        "containerWidth": "100%25",
-        "layoutWidth": "100%25",
- 
-        // Hide the widget and disable animations
-        "hideWidget": false,
-        "disableAnimations": false,
+      <script src="https://cdn.botpress.cloud/webchat/v0/inject.js"></script>
+      <script>
+        window.botpressWebChat.init({
+          // Replace <your-bot-id> and <your-client-id> with your actual bot and client IDs
+          botId: "cc132b53-f84e-4175-8366-5b7a7b231b67",
+          clientId: "cc132b53-f84e-4175-8366-5b7a7b231b67",
 
-        "showPoweredBy": false,
-        "composerPlaceholder": "Chat with bot",
-        "botConversationDescription": "This chatbot was built for Customer Support",
-        "themeColor": "#2563eb",
-        "frontendVersion": "v1",
-        "lazySocket": true,
-        "themeName": "prism",
-    });
- 
-    // Opens up the Chatbot by default
-    // This lets users start chatting with the Chatbot without needing to click any buttons or menus.
-    window.botpressWebChat.onEvent(
-        function () {
-            window.botpressWebChat.sendEvent({ type: "show" });
-        },
-        ["LIFECYCLE.LOADED"]
-    );
-</script>
+          // Set the URL for the Botpress WebChat JavaScript file and the messaging server
+          hostUrl: "https://cdn.botpress.cloud/webchat/v0",
+          messagingUrl: "https://messaging.botpress.cloud",
+
+          // Set the name of the bot that will be displayed in the WebChat interface
+          botName: "Krishi",
+
+          // Set the width of the WebChat container and layout to 100% (Full Screen)
+          containerWidth: "100%25",
+          layoutWidth: "100%25",
+
+          // Hide the widget and disable animations
+          hideWidget: false,
+          disableAnimations: false,
+
+          showPoweredBy: false,
+          composerPlaceholder: "Chat with bot",
+          botConversationDescription:
+            "This chatbot was built for Customer Support",
+          themeColor: "#2563eb",
+          frontendVersion: "v1",
+          lazySocket: true,
+          themeName: "prism",
+        });
+
+        // Opens up the Chatbot by default
+        // This lets users start chatting with the Chatbot without needing to click any buttons or menus.
+        // window.botpressWebChat.onEvent(
+        //     function () {
+        //         window.botpressWebChat.sendEvent({ type: "show" });
+        //     },
+        //     ["LIFECYCLE.LOADED"]
+        // );
+      </script>
 
       <div class="page1">
         <h3 id="main-text">FARMFOLIO</h3>
@@ -173,13 +180,13 @@
         </div>
       </div>
       <div class="page5">
-        <h1>We aim to build</h1>
+        <h1>How It Works ?</h1>
         <div class="page5-part1">
-          <img src="images\gyan-shahane-eSoyrx3YIwk-unsplash.jpg" alt="" />
-          <img src="images\pexels-tomfisk-1595104.jpg" /><img />
+          <img src="images\saarthi.jpg" alt="" />
+          <!-- <img src="images\pexels-tomfisk-1595104.jpg" /><img /> -->
         </div>
       </div>
-
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"

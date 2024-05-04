@@ -38,7 +38,7 @@ body {
   mix-blend-mode: difference;
 }
 .main {
-  background-color: #a2e0b0;
+  background-color: #6fd085;
   cursor: none;
 }
 
@@ -73,7 +73,7 @@ body {
   padding: 0 30px;
   position: fixed;
   /* mix-blend-mode: difference; */
-  z-index: 102;
+  z-index: 1;
   cursor: none;
   color: black;
 }
@@ -302,10 +302,10 @@ body {
   justify-content: space-between;
 }
 .page5-part1 img:nth-child(1) {
-  height: 400px;
-  margin-top: 160px;
+  height: 550px;
+  /* margin-top: 160px; */
 }
-.page5-part1 img:nth-child(2) {
+/* .page5-part1 img:nth-child(2) {
   height: 400px;
   margin-top: 40px;
-}
+} */
