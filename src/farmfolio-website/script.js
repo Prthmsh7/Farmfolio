@@ -120,9 +120,20 @@ var tl4 = gsap.timeline({
   },
 });
 
-tl4.to(".main", {
-  backgroundColor: "#fff",
-});
+tl4.to(
+  ".main",
+  {
+    backgroundColor: "#000",
+  },
+  "a"
+);
+tl4.to(
+  ".page5 h1",
+  {
+    color: "#fff",
+  },
+  "a"
+);
 
 // var boxes = document.querySelectorAll(".box");
 // boxes.forEach(function (elem) {
