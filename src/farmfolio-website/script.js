@@ -109,6 +109,21 @@ tl3.to(".main", {
   backgroundColor: "#D2691E",
 });
 
+var tl4 = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".page1 h1",
+    scroller: ".main",
+    // markers: true,
+    start: "top -350%",
+    end: "top -360%",
+    scrub: 3,
+  },
+});
+
+tl4.to(".main", {
+  backgroundColor: "#fff",
+});
+
 // var boxes = document.querySelectorAll(".box");
 // boxes.forEach(function (elem) {
 //   elem.addEventListener("mouseenter", function () {
