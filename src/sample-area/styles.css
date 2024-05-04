@@ -1,0 +1,26 @@
+/* Change the color of the user's chat bubble */
+.bpw-bubble-user {
+    background-color: #2563eb;
+    color: white;
+  }
+  
+  /* Change the color of the bot's chat bubble */
+  .bpw-bubble-bot {
+    background-color: #e5e7eb;
+    color: black;
+  }
+  
+  /* Change the style of the chat input box */
+  .bpw-composer {
+    background-color: #f3f4f6;
+    border: none;
+    border-radius: 20px;
+    color: #1f2937;
+  }
+  
+  /* Change the style of the send button */
+  .bpw-send-button {
+    background-color: #2563eb;
+    color: white;
+    border-radius: 50%;
+  }

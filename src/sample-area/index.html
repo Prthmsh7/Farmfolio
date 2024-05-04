@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  // Import the Botpress WebChat JavaScript file
+<script src="https://cdn.botpress.cloud/webchat/v0/inject.js"></script>
+ 
+// Initialize the Botpress WebChat with the required parameters
+<script>
+    window.botpressWebChat.init({
+        // Replace <your-bot-id> and <your-client-id> with your actual bot and client IDs
+        "botId": "cc132b53-f84e-4175-8366-5b7a7b231b67",
+        "clientId": "cc132b53-f84e-4175-8366-5b7a7b231b67",
+ 
+        // Set the URL for the Botpress WebChat JavaScript file and the messaging server
+        "hostUrl": "https://cdn.botpress.cloud/webchat/v0",
+        "messagingUrl": "https://messaging.botpress.cloud",
+ 
+        // Set the name of the bot that will be displayed in the WebChat interface
+        "botName": "Krishi",
+ 
+        // Set the width of the WebChat container and layout to 100% (Full Screen)
+        "containerWidth": "100%25",
+        "layoutWidth": "100%25",
+ 
+        // Hide the widget and disable animations
+        "hideWidget": false,
+        "disableAnimations": false,
+
+        "showPoweredBy": false,
+        "composerPlaceholder": "Chat with bot",
+        "botConversationDescription": "This chatbot was built for Customer Support",
+        "themeColor": "#2563eb",
+        "frontendVersion": "v1",
+        "lazySocket": true,
+        "themeName": "prism",
+    });
+ 
+    // Opens up the Chatbot by default
+    // This lets users start chatting with the Chatbot without needing to click any buttons or menus.
+    window.botpressWebChat.onEvent(
+        function () {
+            window.botpressWebChat.sendEvent({ type: "show" });
+        },
+        ["LIFECYCLE.LOADED"]
+    );
+</script>
+ 
+</body>
+</html>
