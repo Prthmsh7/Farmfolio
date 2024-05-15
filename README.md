@@ -9,5 +9,3 @@ Despite the critical role of agriculture in sustaining communities and economies
 2. Crop Disease Detection
 3. Decentralized Marketplace
 4. News bot
-
-
