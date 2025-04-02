@@ -27,7 +27,6 @@ import {
   ChevronDownIcon, 
   ChevronRightIcon,
   SettingsIcon,
-  ExternalLinkIcon,
 } from '@chakra-ui/icons';
 import { Link as RouterLink, useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
@@ -36,7 +35,6 @@ import { FiLogOut, FiUser, FiHelpCircle } from 'react-icons/fi';
 export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
   const { isAuthenticated, user, logout } = useAuth();
-  const navigate = useNavigate();
   const location = useLocation();
 
   const handleLogout = () => {

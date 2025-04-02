@@ -1,32 +1,20 @@
-# FarmFolio - Farm Management System
+# FarmFolio - Farm Management Platform
 
-FarmFolio is a comprehensive farm management application built with the MERN stack (MongoDB, Express, React, Node.js). It helps farmers track crops, manage inventory, analyze data, and maximize productivity.
+FarmFolio is a comprehensive farm management application designed to help farmers track crops, manage resources, and optimize productivity.
 
 ## Features
 
-- User authentication (email/password and Google)
-- Dashboard with farm statistics and visualizations
-- Crop management and tracking
+- User authentication (login, register, password reset)
 - Farm management
-- Weather forecasts
-- Task management
-- Responsive design
+- Crop tracking
+- Analytics dashboard
+- Responsive design for mobile and desktop
 
 ## Tech Stack
 
-### Frontend
-- React with TypeScript
-- Chakra UI for component library
-- React Router for navigation
-- Recharts for data visualization
-- Axios for API requests
-- React Google Login for OAuth
-
-### Backend
-- Node.js with Express
-- MongoDB with Mongoose
-- JWT for authentication
-- bcrypt for password hashing
+- **Frontend**: React, TypeScript, Chakra UI, Vite
+- **Backend**: Node.js, Express, MongoDB
+- **Authentication**: JWT-based authentication
 
 ## Project Structure
 
@@ -53,9 +41,9 @@ farmfolio/
 
 ### Prerequisites
 
-- Node.js (v14 or above)
-- MongoDB
+- Node.js (v14 or higher)
 - npm or yarn
+- MongoDB (local or Atlas)
 
 ### Installation
 
@@ -65,55 +53,114 @@ farmfolio/
    cd farmfolio
    ```
 
-2. Install frontend dependencies:
+2. Install dependencies:
    ```bash
    npm install
    ```
 
-3. Install backend dependencies:
+3. Create environment files:
+   ```
+   # .env
+   REACT_APP_API_URL=http://localhost:5000/api
+   ```
+
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+### Backend Setup
+
+1. Navigate to the backend directory:
    ```bash
    cd backend
+   ```
+
+2. Install dependencies:
+   ```bash
    npm install
    ```
 
-4. Set up environment variables:
-   - Copy `.env.example` to `.env` in the project root
-   - Copy `backend/.env.example` to `backend/.env`
-   - Update the variables with your configuration
-
-5. Start MongoDB:
-   ```bash
-   # Using your preferred method (local installation, Docker, etc.)
+3. Create a `.env` file:
+   ```
+   PORT=5000
+   NODE_ENV=development
+   MONGODB_URI=mongodb://localhost:27017/farmfolio
+   JWT_SECRET=your_jwt_secret_key
    ```
 
-### Running the Application
+4. Start the backend server:
+   ```bash
+   npm start
+   ```
 
-1. Start the backend server:
+## Deployment to Vercel
+
+### Frontend Deployment
+
+1. Install Vercel CLI (optional):
+   ```bash
+   npm install -g vercel
+   ```
+
+2. Deploy using Vercel CLI:
+   ```bash
+   vercel
+   ```
+
+   Alternatively, deploy through GitHub integration:
+
+3. Push your code to GitHub
+4. Go to [Vercel](https://vercel.com) and create an account
+5. Click "New Project" and import your GitHub repository
+6. Configure the project:
+   - Framework Preset: Vite
+   - Build Command: `npm run build`
+   - Output Directory: `dist`
+   - Environment Variables: Add `REACT_APP_API_URL` pointing to your backend
+
+7. Click "Deploy"
+
+### Backend Deployment
+
+For the backend API, you can also use Vercel:
+
+1. Create a `vercel.json` file in your backend directory:
+   ```json
+   {
+     "version": 2,
+     "builds": [
+       {
+         "src": "src/server.js",
+         "use": "@vercel/node"
+       }
+     ],
+     "routes": [
+       {
+         "src": "/(.*)",
+         "dest": "src/server.js"
+       }
+     ]
+   }
+   ```
+
+2. Deploy the backend using Vercel CLI:
    ```bash
    cd backend
-   npm run dev
+   vercel
    ```
 
-2. In a new terminal, start the frontend:
-   ```bash
-   cd ..  # Go back to project root
-   npm run dev
-   ```
+## Continuous Deployment
 
-3. Open your browser and navigate to `http://localhost:5173`
+For continuous deployment:
 
-## Setting up Google OAuth
-
-1. Go to [Google Developer Console](https://console.developers.google.com/)
-2. Create a new project
-3. Enable Google+ API
-4. Configure the OAuth consent screen
-5. Create OAuth 2.0 credentials
-6. Add the client ID to your `.env` file: `REACT_APP_GOOGLE_CLIENT_ID=your_client_id`
+1. Connect your GitHub repository to Vercel
+2. Configure automatic deployments for the main branch
+3. Vercel will automatically deploy when you push changes to GitHub
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+[MIT](LICENSE)
 
 ## Acknowledgments
 
