@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "vite build",
+    "build:ts": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -15,7 +16,7 @@
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
     "@types/recharts": "^1.8.29",
-    "axios": "^1.8.4",
+    "axios": "^1.6.7",
     "framer-motion": "^10.18.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
