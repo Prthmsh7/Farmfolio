@@ -1,11 +1,7 @@
 # Farmfolio
-This repository contains all the files for our project Farmfolio
-
-# Problem Statement
-Despite the critical role of agriculture in sustaining communities and economies, farmers as well as domestic cultivators encounter significant hurdles. They face challenges in selecting the most suitable crops to grow, diagnosing issues with their crops, and accessing the necessary products for cultivation. Limited access to relevant information, personalized guidance, and a platform for purchasing farming-related products restricts farmers' ability to make informed decisions. This often leads to suboptimal crop choices and reduced yields.
+Farmers and domestic cultivators struggle with selecting optimal crops, diagnosing plant issues, and accessing essential farming products due to limited information and resources. This lack of personalized guidance and a unified platform leads to inefficient farming decisions, lower yields, and restricted market access.
 
 # Solution :
-1. Crop Recommendation
-2. Crop Disease Detection
-3. Decentralized Marketplace
-4. News bot
+1. Crop Recommendation and Guidance
+2. News bot
+3. Marketplace
